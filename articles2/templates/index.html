@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h1>index</h1>
+
+    {% for article2 in articles2 %}
+        <p>{{article2.title}}</p>
+        <a href="{% url 'articles2:detail' id=article2.id %}">detail</a>
+
+        <hr>
+    {% endfor %}
+
+{% endblock %}
